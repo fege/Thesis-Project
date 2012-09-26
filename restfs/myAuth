@@ -1,0 +1,11 @@
+
+
+
+
+
+	def encode(self, aws_secret_access_key, str, urlencode=False):
+	    b64_hmac = base64.encodestring(hmac.new(aws_secret_access_key, str, sha).digest()).strip()
+	    if urlencode:
+	        return urllib.quote_plus(b64_hmac)
+	    else:
+	        return b64_hmac

@@ -1,0 +1,51 @@
+host ="restfs.beolink.org"
+#host="s3.amazonaws.com"
+daemon = "false"
+bin_path = "./"
+port = 443
+
+
+# METADATA DRIVER
+##############################################################################
+metadata_driver = "redis"
+metadata_object_db     = "6"
+metadata_object_host   = "localhost"
+metadata_object_port   = 6379
+metadata_object_passwd = ""
+
+metadata_bucket_db     = "7"
+metadata_bucket_host   = "localhost"
+metadata_bucket_port   = 6379
+metadata_bucket_passwd = ""
+
+# STORAGE DRIVER
+##############################################################################
+storage_driver = "fs2"
+storage_root_path = "/tmp/buckets/cache"
+storage_bucket_depth = 0
+storage_object_depth = 0
+
+
+# RESOURCE DRIVER
+##############################################################################
+resource_driver   = "db"
+resource_db_type  = "sqlite"
+resource_db_sid   = "./db/restfs.db"
+resource_db_debug = "false"
+
+# AUTH DRIVER
+##############################################################################
+auth_driver = "file"
+auth_db_path = "/tmp/users.txt"
+
+# INTERFACE
+##############################################################################
+interface_s3  = "True"
+interface_rpc = "True"
+
+ssl = "True"  
+ssl_certfile = "./ssl/server.crt"  
+ssl_keyfile  = "./ssl/server.key"  
+
+
+
